@@ -1,38 +1,196 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-top: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section {
+  position: absolute;
+  top: 10%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input.inputBoxCheck{
+  width:20px;
+  height:20px;
+  cursor: pointer;
+}
+section{
   display: flex;
   flex-direction: column;
+  justify-items: center;
   align-items: center;
+}
+.container {
+  background-color: rgb(179, 178, 198);
+  height: 50px;
+  width: 100%;
+  border: none;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.todoinput {
+  height: 30px;
+  width: 500px;
+  padding-left: 10px;
+  border-radius: 10px;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.todoinput:focus {
+  border: 3px solid rgb(186, 137, 171);
+}
+
+
+.add {
+  height: 1.89rem;
+  width: 10vw;
+  margin-left: 4px;
+  color: #fff;
+  background-color: hsl(205, 94%, 49%);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add:focus {
+  border: 3px solid #719ECE;
+}
+
+.add:hover {
+  background-color: hsl(204, 46%, 27%);
+  border: 3px solid #719ECE
+}
+.list{
+  width: 100%;
+  margin-top: 20px;
+  height:max-content;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+.Added-Tasks{
+  width:100%;
+  margin-top: 10px;
+  height:max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  padding-bottom: 4px;
+  border-bottom: 2px solid rgb(229, 227, 227);
+}
+
+
+.btns {
+
+  margin-left: 2px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.read{
+  background-color:blue ;
+  color:white;
+  padding:4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.edit{
+  background-color:green ;
+  color:white;
+  padding:4px 8px;
+  border-radius: 5px;
+  margin-left: 3px;
+  cursor: pointer;
+  
+}
+.delete{
+  background-color: red;
+  color:white;
+  margin-left:5px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor:pointer;
+}
+
+.completedLine {
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+.task-des{
+  text-align: start;
+  width:400px;
+  overflow: hidden;
+  margin-left: 2px;
+}
+@media screen and (max-width:699px) {
+  section {
+    padding: 0px;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .todoinput {
+    width: 80%;
+  }
+
+  .add {
+    width: 10vw;
+    font-size: 13px;
+  }
+
+  .container {
+    width: 90vw;
+    margin: auto;
+    padding: 8px 0px;
+  }
+
+  .list {
+    width: 86vw;
+    margin: auto;
+    margin-top: 8%;
+  }
+
+ 
+
+  .task {
+    width: 80vw;
+    height: 26px;
+  }
+
+  .btn {
+    top: 0;
+    bottom: 0;
+    width: 19vw;
+    height: 2rem;
+    font-size: 3vw;
+  }
+
+  .complete {
+    left: 0;
+    top: 3vw;
+
+  }
+
+  .delete {
+    left: 0vw;
+    top: 3vw;
   }
 }
